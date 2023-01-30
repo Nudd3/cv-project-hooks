@@ -1,8 +1,6 @@
 import React from 'react';
 import '../styles/general.scss';
 const General = (props) => {
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
 
   const handleChange = (e) => {
     const target = e.target;

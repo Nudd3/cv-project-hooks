@@ -2,13 +2,21 @@ import React from 'react';
 
 const GeneralRender = props => {
 
+  const {firstName, lastName, email, phone,linkedIn, gitHub} = props.general;
+
   return (
-    <div>
-      <h1>Here comes the first name:</h1>
-      {props.general.firstName}
-      <h1>Here comes the last name:</h1>
-      {props.general.lastName}
-      
+    <div className='general-preview'>
+      <div className="name">
+        <h1>{firstName} {lastName}</h1>
+      </div>
+      <div className="general-container">
+        <h2>LinkedIn: {linkedIn}</h2>
+        <h2>Email: {email}</h2>
+      </div>
+      <div className="general-container">
+        <h2>Github: {gitHub}</h2>
+        <h2>Phone: {phone}</h2>
+      </div>
     </div>
   )
 
