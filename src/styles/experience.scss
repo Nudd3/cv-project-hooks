@@ -1,0 +1,103 @@
+@import '../styles/mixins';
+
+// Form
+.experience-form {
+  @include form-basics;
+
+  .form-input {
+    @include form-input;
+  }
+
+  .add-btn {
+    @include add-btn;
+  }
+}
+
+.section-title {
+  font-size: 1.5rem;
+}
+
+// Preview
+.experience-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding-top: 1.5rem;
+
+  .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 1rem;
+  }
+
+  .preview-title {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .experience-upper {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+
+    .company-name {
+      color: #16a34a;
+    }
+  }
+  .experience-lower {
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .delete-btn-div {
+    display: flex;
+  }
+
+  .title-container {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      background-color: #a32d16;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 800;
+  
+      &:hover {
+        cursor: pointer;
+        background-color: #b9422b;
+        color: #000;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+.visible {
+  display: none;
+  padding: 5px 10px;
+  border: none;
+  appearance: none;
+}
+
+.delete-btn-div:hover .visible {
+  display: block;
+}

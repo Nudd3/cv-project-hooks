@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/general.scss';
+
 const General = (props) => {
 
   const handleChange = (e) => {
@@ -19,7 +20,7 @@ const General = (props) => {
           name='firstName'
           type='text'
           id='firstName'
-          value={props.general.firstName}
+          // value={props.general.firstName}
           onChange={handleChange}
           placeholder='First Name'
         />
