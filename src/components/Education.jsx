@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../styles/educational.scss';
+import '../styles/education.scss';
 import uniqid from 'uniqid';
 
-const Educational = props => {
+const Education = props => {
 
   const [education, setEducation] = useState({
     schoolName: '',
@@ -27,14 +27,14 @@ const Educational = props => {
   }
 
   return (
-    <form className='educational-form' onSubmit={onSubmitEducation}>
+    <form className='education-form' onSubmit={onSubmitEducation}>
           <h1 className='section-title'>Education</h1>
           <input
             className='form-input'
             type='text'
             name='schoolName'
             id='schoolName'
-            // value={schoolName}
+            value={education.schoolName}
             onChange={handleChange}
             placeholder='School Name'
           />
@@ -43,7 +43,7 @@ const Educational = props => {
             type='text'
             name='studyTitle'
             id='studyTitle'
-            // value={studyTitle}
+            value={education.studyTitle}
             onChange={handleChange}
             placeholder='Study Title'
           />
@@ -53,7 +53,7 @@ const Educational = props => {
             type='text'
             name='city'
             id='city'
-            // value={city}
+            value={education.city}
             onChange={handleChange}
             placeholder='City'
           />
@@ -63,7 +63,7 @@ const Educational = props => {
             type='number'
             name='startYear'
             id='startYear'
-            // value={startYear}
+            value={education.startYear}
             onChange={handleChange}
             placeholder='Start Year'
           />
@@ -72,7 +72,7 @@ const Educational = props => {
             type='number'
             name='endYear'
             id='endYear'
-            // value={endYear}
+            value={education.endYear}
             onChange={handleChange}
             placeholder='End Year'
           />
@@ -81,4 +81,4 @@ const Educational = props => {
   )
 }
 
-export default Educational;
+export default Education;

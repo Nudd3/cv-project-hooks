@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import General from './components/General';
 import GeneralRender from './components/GeneralRender';
-import Educational from './components/Educational';
-import EducationalRender from './components/EducationalRender';
+import Education from './components/Education';
+import EducationRender from './components/EducationRender';
 import Experience from './components/Experience';
 import './App.scss';
 
@@ -17,8 +17,8 @@ const App = () => {
     linkedIn: '',
     github: '',
   });
-  const [educational, setEducational] = useState([]);
-  const [experience, setExperience] = useState([]);
+  const [educations, setEducations] = useState([]);
+  const [experiences, setExperience] = useState([]);
 
   const generalHandler = (type, info) => {
     setGeneral((general) => ({
@@ -28,30 +28,31 @@ const App = () => {
   };
 
   const educationHandler = (newEducation) => {
-    console.log(typeof educational)
-    setEducational(educational => [...educational, newEducation]);
-    console.log(typeof educational)
-  };
+    setEducations(educations => [...educations, newEducation]);
+  }
+
+  const experienceHandler = (newExperience) => {
+    setExperience
+  }
 
   const deleteEducationHandler = id => {
-    const newEducations = educational.filter(ed => ed.id !== id);
-    setEducational(newEducations);
+    const newEducation = educations.filter(ed => ed.id !== id);
+    setEducations(newEducation);
   }
-  //const handleEducationalChanage
 
   return (
     <div className='App'>
       <div className='app-container'>
         <div className='cv-form-container'>
           <General generalHandler={generalHandler} /*general={general}*/General/>
-          <Educational educationHandler={educationHandler}/>
+          <Education educationHandler={educationHandler}/>
           <Experience />
         </div>
       </div>
       <div className='app-container'>
         <div className='paper-preview'>
           <GeneralRender general={general} />
-          <EducationalRender educational={educational} deleteEducationHandler={deleteEducationHandler} />
+          <EducationRender educations={educations} deleteEducationHandler={deleteEducationHandler} />
         </div>
       </div>
     </div>

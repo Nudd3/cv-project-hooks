@@ -1,6 +1,6 @@
 @import './mixins';
 // Form
-.educational-form {
+.education-form {
   @include form-basics;
 
   .form-input {
@@ -17,7 +17,7 @@
 }
 
 // Preview
-.educational-preview {
+.education-preview {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

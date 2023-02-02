@@ -1,14 +1,14 @@
 import React from 'react';
 
-const EducationalRender = props => {
+const EducationRender = props => {
 
 
   return (
-    <div className='educational-preview'>
+    <div className='education-preview'>
         <div className='container'>
           <h1 className='preview-title'>Education</h1>
 
-          {props.educational.map((education) => {
+          {props.educations.map((education) => {
             return (
               <div key={education.id} className='education-container delete-btn-div'>
                 <div className='education-upper'>
@@ -38,4 +38,4 @@ const EducationalRender = props => {
 
 }
 
-export default EducationalRender;
+export default EducationRender;
