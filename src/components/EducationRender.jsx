@@ -8,13 +8,13 @@ const EducationRender = props => {
         <div className='container'>
           <h1 className='preview-title'>Education</h1>
 
-          {props.educations.map((education) => {
+          {props.educations?.map((education) => {
             return (
               <div key={education.id} className='education-container delete-btn-div'>
                 <div className='education-upper'>
                   <div className='title-container'>
                     <h1 className='school-name'>{education.schoolName}</h1>
-                    <button oncl
+                    <button
                       className='visible'
                       onClick={() => props.deleteEducationHandler(education.id)}
                     >

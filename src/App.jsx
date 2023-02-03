@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 import General from './components/General';
-import GeneralRender from './components/GeneralRender';
 import Education from './components/Education';
-import EducationRender from './components/EducationRender';
 import Experience from './components/Experience';
+import GeneralRender from './components/GeneralRender';
+import EducationRender from './components/EducationRender';
+import ExperienceRender from './components/ExperienceRender';
 import './App.scss';
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
     github: '',
   });
   const [educations, setEducations] = useState([]);
-  const [experiences, setExperience] = useState([]);
+  const [experiences, setExperiences] = useState([]);
 
   const generalHandler = (type, info) => {
     setGeneral((general) => ({
@@ -28,31 +29,43 @@ const App = () => {
   };
 
   const educationHandler = (newEducation) => {
-    setEducations(educations => [...educations, newEducation]);
-  }
+    setEducations((educations) => [...educations, newEducation]);
+  };
 
   const experienceHandler = (newExperience) => {
-    setExperience
-  }
+    setExperiences((experiences) => [...experiences, newExperience]);
+  };
 
-  const deleteEducationHandler = id => {
-    const newEducation = educations.filter(ed => ed.id !== id);
+  const deleteEducationHandler = (id) => {
+    const newEducation = educations.filter((ed) => ed.id !== id);
     setEducations(newEducation);
-  }
+  };
+
+  const deleteExperienceHandler = (id) => {
+    const newExperiences = experiences.filter((ex) => ex.id !== id);
+    setExperiences(newExperiences);
+  };
 
   return (
     <div className='App'>
       <div className='app-container'>
         <div className='cv-form-container'>
-          <General generalHandler={generalHandler} /*general={general}*/General/>
-          <Education educationHandler={educationHandler}/>
-          <Experience />
+          <General generalHandler={generalHandler} />
+          <Education educationHandler={educationHandler} />
+          <Experience experienceHandler={experienceHandler} />
         </div>
       </div>
       <div className='app-container'>
         <div className='paper-preview'>
           <GeneralRender general={general} />
-          <EducationRender educations={educations} deleteEducationHandler={deleteEducationHandler} />
+          <EducationRender
+            educations={educations}
+            deleteEducationHandler={deleteEducationHandler}
+          />
+          <ExperienceRender
+            experiences={experiences}
+            deleteExperienceHandler={deleteExperienceHandler}
+          />
         </div>
       </div>
     </div>

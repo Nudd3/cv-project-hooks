@@ -7,33 +7,32 @@
 
 @mixin form-input {
   appearance: none;
-    border: none;
-    background-color: #e2e8f0;
-    padding: 0.35rem 0 0.35rem 0.35rem;
-    border-radius: 5px;
-    font-size: 1rem;
+  border: none;
+  background-color: #e2e8f0;
+  padding: 0.35rem 0 0.35rem 0.35rem;
+  border-radius: 5px;
+  font-size: 1rem;
 
-    &:focus {
-      outline: none;
-    }
+  &:focus {
+    outline: none;
+  }
 }
 
 @mixin add-btn {
   align-self: flex-start;
-    padding: 0.3rem 1rem;
-    border-radius: 5px;
-    background-color: #cbd5e1;
-    color: #fff;
-    font-size: 1.2rem;
-    border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  background-color: #cbd5e1;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
 
-    &:hover {
-      cursor: pointer;
-      background-color: #a1bcdc;
-      color: #000;
-    }
-    &:active {
-      transform: scale(0.95);
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: #a1bcdc;
+    color: #000;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
-
