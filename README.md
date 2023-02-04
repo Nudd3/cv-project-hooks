@@ -17,3 +17,6 @@ This project was done as a part of [The Odin Project's](https://www.theodinproje
 
 ## Takeaways
 Getting the hang of the React way of doing things certainly took some time. However I really enjoyed the introduction of hooks. Although I far from understood the stuff immediately, the amount of resources found online surely helped me through the fire and the flames. 
+
+## Todo
+* Add an ***Edit*** button to both ***Education*** and ***Experience***
